@@ -6,17 +6,22 @@
   "author": "rebecarose",
   "license": "MIT",
   "scripts": {
-    "build": "",
-    "start": "node api/index.ts"
+    "start": "node index.ts",
+    "migrate": "knex migrate:latest",
+    "unmigrate": "knex migrate:rollback"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.0.1",
+    "knex": "^0.21.17",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.0",
     "@types/express": "^4.17.11",
-    "@types/node": "^14.14.22",
+    "@types/node": "^14.14.24",
     "ts-node": "^9.1.1",
     "tsc": "^1.20150623.0",
     "tslint": "^6.1.3",
