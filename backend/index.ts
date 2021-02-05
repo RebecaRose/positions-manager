@@ -3,9 +3,11 @@ const db = require("./database.ts");
 const app = express();
 
 const userRoute = require('./routes/users.ts');
+const positionRoute = require('./routes/positions.ts');
 
 app.use(express.json());
 app.use('/', userRoute);
+app.use('/', positionRoute);
 
 const PORT = process.env.PORT || 3500;
 
