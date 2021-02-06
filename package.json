@@ -1,0 +1,9 @@
+{
+  "name": "positions-manager",
+  "version": "1.0.0",
+  "repository": "https://github.com/RebecaRose/positions-manager.git",
+  "author": "rebecarose <rebecarose21@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
