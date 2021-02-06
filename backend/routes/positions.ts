@@ -3,7 +3,7 @@ const db = require("../database.ts");
 
 router.get("/positions", async (req, res) => {
     const positions = await db("position");
-    res.json({ positions });
+    res.json({ success: true, positions });
 });
 
 router.post("/positions", async (req, res) => {

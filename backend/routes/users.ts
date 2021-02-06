@@ -3,7 +3,7 @@ const db = require("../database.ts");
 
 router.get("/users", async (req, res) => {
     const users = await db("user");
-    res.json({ users });
+    return res.status(200).json({ success: true, users});
 });
 
 router.post("/users", async (req, res) => {
@@ -12,7 +12,7 @@ router.post("/users", async (req, res) => {
         const result = await UsersService.insertUser(db, user);
         return res.status(200).json({ success: true, message: 'Usuário criado com sucesso!'});
     } catch (err){
-        return res.status(500).json({ success: false, error: err.sqlMessage});
+        
     }
 });
 
