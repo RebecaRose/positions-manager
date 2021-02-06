@@ -1,10 +1,7 @@
-import { Button, Container, Dialog, DialogContent, DialogTitle, Fab, Paper, Table, TableBody, TableCell, 
+import { Button, Container, Dialog, DialogContent, DialogTitle, Paper, Table, TableBody, TableCell, 
 TableContainer, TableHead, TableRow, TextField, FormControl, Select, InputLabel, MenuItem, Grid } from "@material-ui/core";
 import { useStores } from "../../stores/root-store";
 import { observer } from "mobx-react";
-// import EditIcon from '@material-ui/icons/Edit';
-// import DeleteIcon from '@material-ui/icons/Delete';
-
 const Users = () => {
     const { usersStore } = useStores();
 
