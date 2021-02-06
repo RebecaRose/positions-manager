@@ -24,27 +24,21 @@ export default class UsersStore{
     }
 
     public getUsers = async() => {
-        console.log(2);
         const endpoint = 'http://localhost:3500/users';
         const method = 'GET';
         const response = await requestService(endpoint, method);
         if(response.success){
-            console.log(response.users);
             this.users = response.users.map( (user: User) => {
                 user.position = this.positions.find(position => position.id === user.position_id)?.title;
-                console.log(user);
                 return user;
             });
-            console.log(this.users);
         }
     }
 
     public getPositions = async() => {
-        console.log(1);
         const endpoint = 'http://localhost:3500/positions';
         const method = 'GET';
         const response = await requestService(endpoint, method);
-        console.log(response);
         if(response.success){
             this.positions = response.positions;
             this.getUsers();
